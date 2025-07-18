@@ -6,8 +6,8 @@ class Expense:
         self.description = description
         self.date = date
 
-    def __str__(self):
-        return (f"Merchant: {self.merchant}, Amount: {self.amount}, "
+    def __repr__(self):
+        return (f"Merchant: {self.merchant},Amount: {self.amount}, "
                 f"Category: {self.category}, Description: {self.description}, Date: {self.date}")
 
 def new_expense():
