@@ -2,6 +2,7 @@ import csv
 import os
 from pathlib import Path
 
+
 headers = ["Name", " Merchant", " Amount", " Category", " Description", " Date"]
 
 base_dir = Path(__file__).resolve().parent.parent
@@ -15,12 +16,10 @@ def file_creation():
     except FileExistsError:
         pass
 
-def filewriter():
-    with open("ExpenseData.csv", "a") as csvfile: 
-        csvfile.write("test")
-        
-file_creation()
-        
+def filewriter(name, expense):
+    with open(csv_file_path, "a") as csvfile: 
+        writer = csv.writer(csvfile)
+        writer.writerow([name, expense.merchant, expense.amount, expense.category, expense.description, expense.date])     
 
 
 

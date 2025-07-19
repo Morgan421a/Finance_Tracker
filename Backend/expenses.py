@@ -1,3 +1,6 @@
+from filehandler import filewriter
+from filehandler import file_creation
+
 class Expense:
     def __init__(self, merchant, amount, category, description, date):
         self.merchant = merchant
@@ -52,6 +55,7 @@ def new_expense():
     )
     return expense
 Expenses = {}
+file_creation()
 
 power = True
 
@@ -63,7 +67,7 @@ while power:
 
     Expenses[expense_name] = expense
 
-    print(Expenses)
+    filewriter(expense_name, expense)
 
     next_expense = True
     while next_expense:
