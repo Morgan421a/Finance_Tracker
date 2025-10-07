@@ -1,3 +1,12 @@
 Name, Merchant, Amount, Category, Description, Date
-Screwfix Gloves,"('Screwfix',)",5.89,Essential,Disposable Gloves,14/07/2025
-Domino'S Dinner,"(""Domino'S"",)",21.99,Food,Dinner,16/07/2025
+
+Patio Cleaner,"('Screwfix',)",5.0,Essential,Patio Cleaner,04/10/2025
+
+Father'S Day Gift 2025,"('Amazon',)",15.0,Luxury,Laptop Stan,15/09/2025
+
+Skippy'S Lunch,"(""Skippy'S"",)",15.0,Food,Lunchbox Meal,16/05/2025
+
+Skippy'S Lunch,"(""Skippy'S"",)",Food,Lunchbox Meal
+15.0,15/10/2025
+
+Skippy'S Lunch,"(""Skippy'S"",)",15.0,Food,Captain'S Lunchbox,15/09/2025

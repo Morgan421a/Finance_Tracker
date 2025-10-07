@@ -19,7 +19,8 @@ def file_creation():
 def filewriter(name, expense):
     with open(csv_file_path, "a") as csvfile: 
         writer = csv.writer(csvfile)
-        writer.writerow([name, expense.merchant, expense.amount, expense.category, expense.description, expense.date])     
+        writer.writerow("")
+        writer.writerow([name, expense.merchant, expense.amount, expense.category, expense.description, expense.date]) 
 
 
 

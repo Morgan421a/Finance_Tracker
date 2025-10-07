@@ -1,21 +1,13 @@
-from filehandler import filewriter
-from filehandler import file_creation
+from filehandler import filewriter, file_creation
+from Packages.Expense import Expense
 
-class Expense:
-    def __init__(self, merchant, amount, category, description, date):
-        self.merchant = merchant
-        self.amount = amount
-        self.category = category
-        self.description = description
-        self.date = date
-
-    def __repr__(self):
+def __repr__(self):
         return (f"Merchant: {self.merchant},Amount: {self.amount}, "
                 f"Category: {self.category}, Description: {self.description}, Date: {self.date}")
 
 def new_expense():
     category_check = True
-    merchant = input("Merchant: ").title(),
+    merchant = input("Merchant: ").lower().title(),
     amount = float(input("Amount: "))
     while category_check == True:
         category = input("Category - Essential, Food, Groceries, Recurring, Luxury, Savings, Misc (E, F, G, R, L, S, M): ").lower()
@@ -43,7 +35,7 @@ def new_expense():
         else:
             print("Invalid Input, Please Try Again")
     
-    description = input("Description: ").title()
+    description = input("Description: ").lower().title()
     date = input("Date: ")
 
     expense = Expense(
@@ -63,7 +55,7 @@ while power:
    
     expense = new_expense()
 
-    expense_name = input("Name of Expense: ").title()
+    expense_name = input("Name of Expense: ").lower().title()
 
     Expenses[expense_name] = expense
 
