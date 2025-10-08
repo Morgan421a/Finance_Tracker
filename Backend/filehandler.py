@@ -3,7 +3,8 @@ import os
 from pathlib import Path
 
 
-headers = ["Name", " Merchant", " Amount", " Category", " Description", " Date"]
+
+headers = ["Name", " Merchant", " Amount", " Category", " Description", " Date DD/MM/YYYY"]
 
 base_dir = Path(__file__).resolve().parent.parent
 csv_file_path = base_dir / "ExpenseData.csv"

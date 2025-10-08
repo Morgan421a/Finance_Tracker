@@ -3,11 +3,11 @@ from Packages.Expense import Expense
 
 def __repr__(self):
         return (f"Merchant: {self.merchant},Amount: {self.amount}, "
-                f"Category: {self.category}, Description: {self.description}, Date: {self.date}")
+                f"Category: {self.category}, Description: {self.description}, Date DD/MM/YYYY: {self.date}")
 
 def new_expense():
     category_check = True
-    merchant = input("Merchant: ").lower().title(),
+    merchant = input("Merchant: ").title()
     amount = float(input("Amount: "))
     while category_check == True:
         category = input("Category - Essential, Food, Groceries, Recurring, Luxury, Savings, Misc (E, F, G, R, L, S, M): ").lower()
@@ -35,8 +35,8 @@ def new_expense():
         else:
             print("Invalid Input, Please Try Again")
     
-    description = input("Description: ").lower().title()
-    date = input("Date: ")
+    description = input("Description: ").title()
+    date = input("Date DD/MM/YYYY: ")
 
     expense = Expense(
         merchant = merchant,
@@ -55,7 +55,7 @@ while power:
    
     expense = new_expense()
 
-    expense_name = input("Name of Expense: ").lower().title()
+    expense_name = input("Name of Expense: ").title()
 
     Expenses[expense_name] = expense
 
